@@ -6,28 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 <body>
 
    <section class="area-login">
-        <div class="login">
+        <div class="login" id="login-user">
             <div>
-                <img src="imagens/login.png" alt="">
+                <img src="/imagens/person-fill.svg" alt="">
             </div>
 
             <form action="#" method="post">
-                <input type="text" name="usuario" id="usuario" required placeholder="nome do usuário">
-                <input type="password" name="senha" id="senha" required placeholder="senha">
+                    <input type="text" name="usuario" id="usuario" required placeholder="nome do usuário">
+                    <input type="password" name="senha" id="senha" required placeholder="senha">
                 <div class="forgot-password">   
-                    <div>
+                
                         <label>
-                            Lembrar me<input type="checkbox" name="lembrar-me" id="lembrar-me">
+                            <input type="checkbox" name="lembrar-me" id="lembrar-me">Lembrar me
                         </label>
-                    </div>
-                    <div>
                         <label>Esqueceu sua senha?<a href="">Clique aqui</a></label>
-                    </div>
                 </div>
                 <input type="submit" value="entrar">
                 <div class="register">

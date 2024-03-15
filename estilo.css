@@ -1,92 +1,120 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #1B1F27;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    height: 100vh;
 
-}
-
-header {
-    background-color: #24252a;
-    box-shadow: 0px 3px 10px #464646;
 }
 
 /*SUB-MENU*/
 
-.bottom-header nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.bottom-header nav ul li a{
-    color: #fff;
-    padding: 20px 40px;
-    margin: 0;
-    display: block;
+nav.menu-lateral {
+    width: 70px;
+    height: 100%;
+    background-color: #24252a ;
+    padding: 40px 0px 40px 1%;
+    box-shadow: 3px 0 0 #2d2f3d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
     transition: .2s;
-    align-items: center;
-}
-
-.bottom-header nav ul li a:hover{
-    background-color: #181920;
-    border-radius: 2px;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
     margin: 0;
 }
 
-.drop-hover{
+nav.menu-lateral:hover{
+    width: 250px;
+    margin: 0;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+}
+
+ul li.item-menu{
+    transition: .2s;
+    margin: 0;
+}
+
+ul li.item-menu:hover{
+    background-color: #181920 ;
+}
+
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 15px;
+    line-height: 40px;
+    margin: 0;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 25px;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+}
+
+.item-menu{
     position: relative;
 }
 
-.drop-hover .drop{
-    position: absolute;
+.item-menu .drop {
     background-color: #33353d;
     width: 100%;
     height: 0;
     overflow: hidden;
-    transition: .2s;
 }
 
-.drop-hover .drop a{
-    padding: 20px;
+.item-menu .drop > a {
+    display: block;
+
+    text-align: center;
+    
+}
+.item-menu .drop a{
+    font-size: 15px;
+    padding: 10px;
     margin: 0;
+    align-content: flex-end;
 }
 
-.drop-hover:hover .drop{
+.item-menu:hover .drop{
     height: auto;
 }
 
-/*LOGOTIPO*/
-.logo {
-    display: flex;
-    align-items: center;
+.item-menu .drop a:hover{
+    background-color: #181920;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
 }
 
-.logo h1 {
-    color: #fff;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-}
-
-nav ul {
-    display: inline-flex;
-    list-style: none;
-}
-
-nav ul li {
-    width: 120px;
-}
-
+/*LOGIN*/
 .area-login {
     display: flex;
     justify-content: center;
@@ -102,9 +130,18 @@ nav ul li {
     align-items: center;
     background-color: #181920;
     width: 355px;
-    height: 320px;
+    height: 415px;
     padding: 35px;
     border-radius: 8px;
+}
+
+#login-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    height: 340px;
+    width: 360px;
+    padding: 35px;
 }
 
 .login form {
@@ -113,8 +150,14 @@ nav ul li {
     width: 100%;
 }
 
+.register {
+    display: flex;
+    justify-content: center;
+}
+
 .register p {
    align-items: center;
+   justify-content: center;
    margin: 0;
    padding: 5px;
 }
@@ -129,12 +172,14 @@ nav ul li {
     outline: none;
     box-sizing: border-box;
     padding-left: 10px;
+    width: 100%;  
 }
 
 .login img {
-    width: 65px;
+    width: 90px;
     height: auto;
     background-color: transparent;
+    margin-top: 0;
 }
 
 input::placeholder {
@@ -154,7 +199,7 @@ form [type="submit"] {
 
 p {
     color: #CBD0F7;
-    font-size: small;
+    font-size: 10px;
 }
 
 a {
@@ -162,27 +207,22 @@ a {
     text-decoration: none;
     margin-left: 10px;
 }
+
 .forgot-password {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    font-size: small;
     margin-top: 5px;
-
-}
-
-.forgot-password div {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 0;
 }
 
 .forgot-password label {
+    display: block;
     color: #CBD0F7;
+    font-size: 10px;
 }
 
 .forgot-password input[type="checkbox"] {
-    height: 15px;
-    box-sizing: border-box;
+    height: 10px;
+    width: 10px;
     margin-top: 0;
 }
